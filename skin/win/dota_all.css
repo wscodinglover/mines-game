@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* CSS Document */
+@import "../common.css";
+
+/* ------------------------------------------------- Menu ------------------------------- */
+.d_toolbar{
+	padding:0px; padding-left:2px;
+}
+.d_menu{
+	position:relative; font-size:12px; line-height:20px; cursor:default; margin-top:2px; height:20px; z-index:1000;
+}
+.d_menu *, .d_menu div{
+	z-index:3000;
+}
+.d_mainmenu{
+	height:20px; line-height:18px; overflow:hidden;  cursor:default;
+}
+.d_mainmenu .d_menuitem{
+	float:left; width:60px; color:#222; text-align:center; border:0px solid #D4D0C8; 
+}
+.d_mainmenu .hover{
+	border:1px solid #eee; border-right:1px solid #555; border-bottom:1px solid #555; height:18px; line-height:17px; width:58px;
+}
+.d_mainmenu .click{
+	border:1px solid #555; border-right:1px solid #eee; border-bottom:1px solid #eee; height:18px; line-height:18px; width:58px;
+}
+.d_submenu{
+	border:1px solid #eee; border-right:1px solid #555; border-bottom:1px solid #555; line-height:19px; cursor:default;
+	display:none; position:absolute; top:18px; left:0px; background:#D4D0C8; width:152px; overflow:hidden; color:#222;
+}
+.d_submenu .d_menuitem{
+	float:none; color:#222; margin:1px;
+}
+.d_submenu .hover{
+	background:#33407F; color:#fff; margin:1px;
+}
+.d_submenu .d_menuseparator{
+	height:0px; line-height:0px; font-size:0px; margin-top:3px; margin-bottom:3px; margin-left:2px; margin-right:2px;
+	border-top:1px solid #777; border-bottom:1px solid #eee; 
+}
+.d_submenu .d_menuitem span{
+	display:inline-block;
+}
+.d_submenu .d_menuitem_check{
+	width:20px; font-family:"宋体"; text-align:center;
+}
+.d_submenu .d_menuitem_cext{
+	width:135px;
+}
+.d_submenu .d_menuitem_more{
+	width:15px; text-align:center;
+}
+
+/* ------------------------------------------------- Button ------------------------------- */
+.d_btn, .d_btn_down, .d_button, .d_button_hover, .d_button_down, .d_mbutton, .d_xbutton{
+	border:1px solid #EFF4ED; border-right:1px solid #404040; border-bottom:1px solid #404040; 
+	cursor:default;
+}
+.d_button .d_button_border, .d_mbutton .d_button_border, .d_xbutton .d_button_border{
+	font-family:Arial, Helvetica, sans-serif; text-align:center; font-weight:bold; line-height:12px; height:12px; color:#000;
+	border:1px solid #D4D0C8; border-right:1px solid #808080; border-bottom:1px solid #808080;
+}
+.d_button_down, .d_btn_down{
+	border:1px solid #404040; border-right:1px solid #EFF4ED; border-bottom:1px solid #EFF4ED;
+}
+.d_button_down .d_button_border, .d_btn_down .d_button_border{
+	border:1px solid #eee; border-left:1px solid #808080; border-top:1px solid #808080;
+}
+.d_btn .d_button_border{
+	 border:1px solid #D4D0C8; border-right:1px solid #808080; border-bottom:1px solid #808080; line-height:18px;
+}
+.d_btn, .d_btn_down{
+	font-family:"宋体"; width:60px; height:20px; text-align:center; color:#000;
+}
+
+/* ------------------------------------------------- Window ------------------------------- */
+.d_window {
+	position:relative; left:50px; top:50px; background:#D4D0C8; border:1px solid #D4D0C8; width:400px; height:300px;
+	border-right:1px solid #404040; border-bottom:1px solid #404040; cursor:default;
+}
+.d_window .border{
+	border:1px solid #EFF4ED; border-right:1px solid #808080; border-bottom:1px solid #808080;
+}
+.d_window .titleContainer{
+	height:16px; line-height:16px; background:#0B1461; color:#fff; overflow:hidden; padding:2px; position:relative;
+	filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#33407F,endcolorstr=#B2CCDD,gradientType=1);
+	background:-moz-linear-gradient(left, #33407F, #B2CCDD);
+	background:-webkit-gradient(linear, left top, right bottom, from(#33407F), to(#B2CCDD)); 
+	background:-o-linear-gradient(left,#33407F, #B2CCDD);
+	background:-webkit-linear-gradient(left,#33407F,#B2CCDD);
+}
+.d_window .titleContainer .title{
+	background:url(../../images/mine.gif) 2px 1px no-repeat; font-weight:bold; padding-left:24px;
+}
+.d_window .titleContainer .button_border{
+	position:absolute; top:2px; right:2px; height:16px; overflow:hidden; 
+}
+.d_window .titleContainer .button, .d_window .titleContainer .hover{
+	float:right; margin-right:2px; width:18px; height:15px; background:#D6CFC2;
+	/*border:1px solid #D4D0C8; border-right:1px solid #404040; border-bottom:1px solid #404040; */
+	background:url(images/ctlbtn.jpg) -31px 1px no-repeat;
+}
+.d_window .titleContainer .minButton{
+	background:url(images/ctlbtn.jpg) 1px 1px no-repeat; margin-right:0px;
+}
+.d_window .titleContainer .maxButton{
+	background:url(images/ctlbtn.jpg) -47px 1px no-repeat;
+}
+.d_window .content{
+	height:260px; color:#FFF; 
+}
+.d_overlayer{
+	display:none; position:absolute; left:0px; top:0px; background:#ccc;
+}
+.d_dialog{
+	display:none;
+}
+.d_dialog .buttonContainer{
+	position:relative; height:50px; overflow:hidden;
+}
+.d_window_movebg{
+	 position:absolute; display:none; background:#D4D0C8; border:1px solid #808080;
+}
+.d_window_movebg div{
+	height:28px; line-height:28px; background:#D4D0C8; overflow:hidden; 
+}
+
+
+/* ------------------------------------------------- Tab ------------------------------- */
+.d_tab{
+	overflow:hidden; position:relative;
+}
+.d_tab_title{
+	height:24px; line-height:22px; color:#000; cursor:default; z-index:50;  overflow:hidden;
+}
+.d_tab_title .d_tab_t{
+	position:absolute; z-index:1;
+	border:1px solid #fff; border-right:1px solid #404040; border-bottom:1px solid #404040;
+}
+.d_tab_title .d_tab_b{
+	width:60px; background:#D4D0C8; text-align:center;
+	border:1px solid #D4D0C8; border-right:1px solid #808080; border-bottom:1px solid #808080;
+}
+.d_tab_title a:hover{
+	
+}
+.d_tab_title .click{
+	z-index:3000; border-bottom:0px; height:23px;
+}
+.d_tab_title .click .d_tab_b{
+	background:#D4D0C8; font-weight:bold;
+	border:1px solid #D4D0C8; border-right:1px solid #808080; border-bottom:0; 
+}
+.d_tab_border{
+	margin-top:-1px; z-index:1000; position:relative; min-height:200px; height:235px; overflow:hidden;
+}
+.d_tab_content{
+	background:#D4D0C8; color:#000; position:absolute; z-index:2000;
+	border:1px solid #fff; border-right:1px solid #404040; border-bottom:1px solid #404040;
+}
+.d_tab_content_b{
+	border:1px solid #D4D0C8; border-right:1px solid #808080; border-bottom:1px solid #808080; border-top:0px; padding:2px;
+}
+
+
+/* ------------------------------------------------- Slider ------------------------------- */
+.d_slider{
+	height:22px; line-height:20px; overflow:hidden; position:relative; cursor:default;
+}
+.d_slider_line{
+	float:left; border-top:1px solid #243558; border-bottom:1px solid #698CD0; 
+	height:0px; line-height:0px; font-size:0px; margin-top:10px; cursor:default;
+}
+.d_slider_text{
+	float:right; color:#EEE; -moz-user-select:none;
+}
+.d_slider_box{
+	position:absolute; clear:both; top:0px; width:8px; height:20px; background:#354D72; cursor:default;
+	border-top:1px solid #4B73B9;  border-left:1px solid #4B73B9;
+	border-right:1px solid #223354; border-bottom:1px solid #223354; 
+}
+
+
+/* ------------------------------------------------- Tooltip ------------------------------- */
+.d_tooltip{
+	position:absolute; border:1px solid #999; background:#444; color:#00AA00;
+}
+
+/* --------------------------------------------- CheckBox Radio ----------------------------- */
+.d_checkbox, .d_radio{
+	height:22px; line-height:22px; padding-left:24px; cursor:url(images/link.cur), auto;
+}
+.d_checkbox input, .d_radio input{
+	position:absolute; left:-9999px; height:10px;
+}
+.d_checkbox_on{
+	background:url(images/dota/chk_on.gif) 3px -2px no-repeat;
+}
+.d_checkbox_off{
+	background:url(images/dota/chk_off.gif) 3px -2px no-repeat;
+}
+.d_radio_on{
+	background:url(images/dota/rdo_on.gif) 3px 0px no-repeat;
+}
+.d_radio_off{
+	background:url(images/dota/rdo_off.gif) 3px 0px no-repeat;
+}
