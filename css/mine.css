@@ -1,0 +1,255 @@
+@charset "gb2312";
+/* CSS Document */
+html, body{
+	margin:0px; padding:0px; font-size:12px; background:#aaa; color:#fff;
+}
+
+.gameArea{
+	border:2px solid #eee; border-right:2px solid #666; border-bottom:2px solid #666;
+	background:#bfbfbf; padding:5px;
+}
+.info{
+	border:1px solid #666; border-right:1px solid #eee; border-bottom:1px solid #eee; height:34px; overflow:hidden;
+}
+.info .left{
+	float:left; width:35%; 
+}
+.info .middle{
+	float:left; width:29.9%; text-align:center;
+}
+.info .right{
+	float:right; width:35%; text-align:right; position:relative;
+}
+.info .mines, .info .time{
+	margin-top:5px; width:39px; height:23px; overflow:hidden;
+	border:1px solid #808080; border-right:1px solid #fff; border-bottom:1px solid #fff;
+}
+.info .mines{
+	margin-left:10px;
+}
+.info .time{
+	 position:absolute; right:10px; z-index:1;
+}
+.info .smile{
+	margin:5px auto; width:24px; height:24px; overflow:hidden; cursor:default;
+}
+.info .d_smile{
+	width:24px; height:24px; background:url(../images/smile.bmp) 0px -96px no-repeat;
+}
+.info .d_smile_down{
+	width:24px; height:24px; background:url(../images/smile.bmp) 0px 0px no-repeat;
+}
+.info .d_smile_press{
+	width:24px; height:24px;  background:url(../images/smile.bmp) 0px -72px no-repeat;
+}
+.info .d_smile_over{
+	width:24px; height:24px;  background:url(../images/smile.bmp) 0px -48px no-repeat;
+}
+.info .d_smile_win{
+	width:24px; height:24px;  background:url(../images/smile.bmp) 0px -24px no-repeat;
+}
+
+.info b{
+	display:block; float:left; width:13px; height:23px; overflow:hidden;
+}
+.info .num_0{
+	background:url(../images/num.bmp) 0px -253px no-repeat;
+}
+.info .num_1{
+	background:url(../images/num.bmp) 0px -230px no-repeat;
+}
+.info .num_2{
+	background:url(../images/num.bmp) 0px -207px no-repeat;
+}
+.info .num_3{
+	background:url(../images/num.bmp) 0px -184px no-repeat;
+}
+.info .num_4{
+	background:url(../images/num.bmp) 0px -161px no-repeat;
+}
+.info .num_5{
+	background:url(../images/num.bmp) 0px -138px no-repeat;
+}
+.info .num_6{
+	background:url(../images/num.bmp) 0px -115px no-repeat;
+}
+.info .num_7{
+	background:url(../images/num.bmp) 0px -92px no-repeat;
+}
+.info .num_8{
+	background:url(../images/num.bmp) 0px -69px no-repeat;
+}
+.info .num_9{
+	background:url(../images/num.bmp) 0px -46px no-repeat;
+}
+.info .num_-{
+	background:url(../images/num.bmp) 0px 0px no-repeat;
+}
+
+.map{
+	margin-top:8px; border:2px solid #808080; border-right:2px solid #fff; border-bottom:2px solid #fff;
+}
+.map table{
+	
+}
+.map table td{
+	width:16px; height:16px;overflow:hidden; background:url(../images/mineicon.bmp) 0px 0px no-repeat;
+}
+
+.map .m_normal, .map .f_0{
+	background:url(../images/mineicon.bmp) 0px 0px no-repeat;
+}
+.map .m_flag, .map .f_1{
+	background:url(../images/mineicon.bmp) 0px -16px no-repeat;
+}
+.map .m_unknow, .map .f_2{
+	background:url(../images/mineicon.bmp) 0px -32px no-repeat;
+}
+.map .m_bomb, .map .m_9{
+	background:url(../images/mineicon.bmp) 0px -48px no-repeat;
+}
+.map .m_notmine{
+	background:url(../images/mineicon.bmp) 0px -64px no-repeat;
+}
+.map .m_mine{
+	background:url(../images/mineicon.bmp) 0px -80px no-repeat;
+}
+.map .m_unknow2{
+	background:url(../images/mineicon.bmp) 0px -96px no-repeat;
+}
+.map .m_8{
+	background:url(../images/mineicon.bmp) 0px -112px no-repeat;
+}
+.map .m_7{
+	background:url(../images/mineicon.bmp) 0px -128px no-repeat;
+}
+.map .m_6{
+	background:url(../images/mineicon.bmp) 0px -144px no-repeat;
+}
+.map .m_5{
+	background:url(../images/mineicon.bmp) 0px -160px no-repeat;
+}
+.map .m_4{
+	background:url(../images/mineicon.bmp) 0px -176px no-repeat;
+}
+.map .m_3{
+	background:url(../images/mineicon.bmp) 0px -192px no-repeat;
+}
+.map .m_2{
+	background:url(../images/mineicon.bmp) 0px -208px no-repeat;
+}
+.map .m_1{
+	background:url(../images/mineicon.bmp) 0px -224px no-repeat;
+}
+.map .m_0{
+	background:url(../images/mineicon.bmp) 0px -240px no-repeat;
+}
+
+
+/*		gray 		*/
+.gray .info .d_smile{
+	width:24px; height:24px; background:url(../images/smile_gray.bmp) 0px -96px no-repeat;
+}
+.gray .info .d_smile_down{
+	width:24px; height:24px; background:url(../images/smile_gray.bmp) 0px 0px no-repeat;
+}
+.gray .info .d_smile_press{
+	width:24px; height:24px;  background:url(../images/smile_gray.bmp) 0px -72px no-repeat;
+}
+.gray .info .d_smile_over{
+	width:24px; height:24px;  background:url(../images/smile_gray.bmp) 0px -48px no-repeat;
+}
+.gray .info .d_smile_win{
+	width:24px; height:24px;  background:url(../images/smile_gray.bmp) 0px -24px no-repeat;
+}
+
+.gray .info .num_0{
+	background:url(../images/num_gray.bmp) 0px -253px no-repeat;
+}
+.gray .info .num_1{
+	background:url(../images/num_gray.bmp) 0px -230px no-repeat;
+}
+.gray .info .num_2{
+	background:url(../images/num_gray.bmp) 0px -207px no-repeat;
+}
+.gray .info .num_3{
+	background:url(../images/num_gray.bmp) 0px -184px no-repeat;
+}
+.gray .info .num_4{
+	background:url(../images/num_gray.bmp) 0px -161px no-repeat;
+}
+.gray .info .num_5{
+	background:url(../images/num_gray.bmp) 0px -138px no-repeat;
+}
+.gray .info .num_6{
+	background:url(../images/num_gray.bmp) 0px -115px no-repeat;
+}
+.gray .info .num_7{
+	background:url(../images/num_gray.bmp) 0px -92px no-repeat;
+}
+.gray .info .num_8{
+	background:url(../images/num_gray.bmp) 0px -69px no-repeat;
+}
+.gray .info .num_9{
+	background:url(../images/num_gray.bmp) 0px -46px no-repeat;
+}
+.gray .info .num_-{
+	background:url(../images/num_gray.bmp) 0px 0px no-repeat;
+}
+
+.gray .map .m_normal, .gray .map .f_0{
+	background:url(../images/mineicon_gray.bmp) 0px 0px no-repeat;
+}
+.gray .map .m_flag, .gray .map .f_1{
+	background:url(../images/mineicon_gray.bmp) 0px -16px no-repeat;
+}
+.gray .map .m_unknow, .gray .map .f_2{
+	background:url(../images/mineicon_gray.bmp) 0px -32px no-repeat;
+}
+.gray .map .m_bomb, .gray .map .m_9{
+	background:url(../images/mineicon_gray.bmp) 0px -48px no-repeat;
+}
+.gray .map .m_notmine{
+	background:url(../images/mineicon_gray.bmp) 0px -64px no-repeat;
+}
+.gray .map .m_mine{
+	background:url(../images/mineicon_gray.bmp) 0px -80px no-repeat;
+}
+.gray .map .m_unknow2{
+	background:url(../images/mineicon_gray.bmp) 0px -96px no-repeat;
+}
+.gray .map .m_8{
+	background:url(../images/mineicon_gray.bmp) 0px -112px no-repeat;
+}
+.gray .map .m_7{
+	background:url(../images/mineicon_gray.bmp) 0px -128px no-repeat;
+}
+.gray .map .m_6{
+	background:url(../images/mineicon_gray.bmp) 0px -144px no-repeat;
+}
+.gray .map .m_5{
+	background:url(../images/mineicon_gray.bmp) 0px -160px no-repeat;
+}
+.gray .map .m_4{
+	background:url(../images/mineicon_gray.bmp) 0px -176px no-repeat;
+}
+.gray .map .m_3{
+	background:url(../images/mineicon_gray.bmp) 0px -192px no-repeat;
+}
+.gray .map .m_2{
+	background:url(../images/mineicon_gray.bmp) 0px -208px no-repeat;
+}
+.gray .map .m_1{
+	background:url(../images/mineicon_gray.bmp) 0px -224px no-repeat;
+}
+.gray .map .m_0{
+	background:url(../images/mineicon_gray.bmp) 0px -240px no-repeat;
+}
+
+.userName{
+	text-align:center; color:#069; margin-top:2px; height:20px; line-height:20px;
+}
+
+.description{
+	position:relative; margin-left:-2000px; color:#aaa;
+}

@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	overflow:hidden;
+}
+
+#about{
+	margin-left:20px; margin-top:20px; color:#000; width:220px; overflow:hidden;
+}
+#about img{
+	float:left;
+}
+#about #info{
+	float:left; margin-left:20px;
+}
+
+#custom{
+	margin-left:5px; margin-top:15px; color:#000; width:270px; overflow:hidden;
+}
+#custom span{
+	text-decoration:underline;
+}
+#custom .text{
+	border:1px solid #404040; border-right:1px solid #fff; border-bottom:1px solid #fff;
+	width:75px; height:20px; padding:0px; overflow:hidden; position:relative;
+}
+#custom .text input{
+	position:absolute; top:0px; width:73px; height:18px; line-height:18px; background:#fff; margin:0px; padding:0px; font-family:"Courier New";
+	border:1px solid #808080; border-right:1px solid #D4D0C8; border-bottom:1px solid #D4D0C8;
+}
+
+#top{
+	margin:10px; margin-top:15px;
+}
+#top table{
+	width:360px;
+}
+#top table .title{
+	
+}
+.showData{
+	text-align:center; color:#069; text-decoration:underline;
+}

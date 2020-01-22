@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>自定义雷区</title>
+<link rel="stylesheet" type="text/css" href="../skin/win/dota_all.css"/>
+<link rel="stylesheet" type="text/css" href="../skin/option.css"/>
+<script type="text/javascript" src="../js/dota/base.js" ></script>
+<script type="text/javascript" src="../js/dota/button.js" ></script>
+<script type="text/javascript">
+var Custom = {
+	data : [],
+	init : function(){
+		this.btnOK = new DOTA.Button({
+			text: "确定", 
+			className:["d_btn", "", "d_btn_down"], 
+			onClick: $.event.bindEvent(this, this.onOK)
+		});
+		this.btnOK.renderTo($.$("btnOK"));
+		
+		this.btnCancel = new DOTA.Button({
+			text: "取消", 
+			className:["d_btn", "", "d_btn_down"], 
+			onClick: $.event.bindEvent(this, this.onCancel)
+		});
+		this.btnCancel.renderTo($.$("btnCancel"));
+		//
+		this.data = parent.Mine.customInfo();
+		$.$("txtWidth").value = this.data[1];
+		$.$("txtHeight").value = this.data[0];
+		$.$("txtMines").value = this.data[2];
+	},
+	check : function(elem, minValue, maxValue, defValue){
+		var value = parseInt($.$(elem).value, 10);
+		if(isNaN(value)) value = defValue;
+		if(value < minValue) value = minValue;
+		if(value > maxValue) value = maxValue;
+		
+		return value;
+	},
+	onOK : function(){
+		var width = this.check("txtWidth", 10, 30, 20),
+			height = this.check("txtHeight", 10, 24, 20),
+			mines = this.check("txtMines", 5, 666, 60),
+			m = parseInt(width * height * 0.925);
+		if(mines > m) mines = m;
+
+		parent.Mine.customInfo([height, width, mines]);
+		parent.Mine.closeDialog();
+	},
+	onCancel : function(){
+		parent.Mine.closeDialog();
+	}
+};
+document.oncontextmenu = function(){
+	return false;
+};
+window.onload = function(){
+	$ = DOTA;
+	Custom.init();
+};
+</script>
+</head>
+
+<body>
+<table id="custom" border='0' cellpadding='3' cellspacing='0'>
+	<tr>
+    	<td width='23%' align='right'>高度(<span>H</span>):</td>
+        <td width='34%'><div class="text"><input type="text" id="txtHeight" /></div></td>
+        <td><div class="buttonx" id="btnOK"></div></td>
+    </tr><tr>
+    	<td align='right'>宽度(<span>W</span>):</td>
+        <td colspan='2'><div class="text" ><input type="text" id="txtWidth" /></div></td>
+    </tr><tr>
+    	<td align='right'>雷数(<span>M</span>):</td>
+        <td><div class="text"><input type="text" id="txtMines" /></div></td>
+        <td><div class="buttonx" id="btnCancel"></div></td>
+    </tr>
+</table>
+</body>
+</html>
