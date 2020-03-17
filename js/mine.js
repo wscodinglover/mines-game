@@ -66,7 +66,7 @@
     state : STATE.wait,
     clickInfo : CLICKINFO,
     top : [],
-    wav : [['sound/win.mp3','win'],['sound/lose.mp3','lose'],['sound/timer.mp3','timer']],
+    wav : [['sound/win.mp3','win'],['sound/lose.mp3','lose'],['sound/timer.mp3','timer'],['sound/background.mp3','background']],
     token : "",
     init : function(elem, config){
       this.element = $.$(elem);
@@ -76,7 +76,7 @@
         color	: true,
         music	: false
       }, config || {});
-      
+
       this.loadConfig();
       this.initUI();
       this.setLevel();
@@ -258,6 +258,12 @@
       this.music = !this.music;
       this.menu.setFlag(0, 10, this.music);
       this.saveConfig("music", this.music ? 1 : 0);
+
+      if(this.music){
+        this.sound.play("background");
+      } else{
+        this.sound.stop("background");
+      }
     },
     fmtPara : function(para){
       var ret = [-1,-1];
@@ -565,9 +571,10 @@
         this.time++;
         this.refreshTime();
       }
-      if(this.music){
-        this.sound.play("timer");
-      }
+
+      // if(this.music){
+      //   this.sound.play("timer");
+      // }
     },
     start : function(){
       this.stop();
@@ -581,6 +588,9 @@
       this.initMine();
       this.refreshMines();
       this.refreshTime();
+      if(this.music && this.sound && this.sound.play){
+        this.sound.play("background");
+      }
     },
     stop : function(){
       console.log('stop')
@@ -604,7 +614,7 @@
       return false;
     },
     gameWin : function(){
-      if(this.music) this.sound.play("win");
+      // if(this.music) this.sound.play("win");
       this.stop();
       this.smile.addCss("d_smile_win");
       console.log('gameWin before')
@@ -621,10 +631,15 @@
       }
     },
     gameOver : function(){
-      if(this.music) this.sound.play("lose");
+      // if(this.music) this.sound.play("lose");
       this.stop();
       this.smile.addCss("d_smile_over");
       console.log('gameOver')
+      var dlg = this.dlg
+      dlg.setTitle("很遗憾！");
+      dlg.loadUrl("html/loss.html");
+      dlg.resizeTo(200, 180);
+      dlg.show();
       
       var d = this.data, t = this.oTable;
       for(var i = 0; i < this.row; i++){
